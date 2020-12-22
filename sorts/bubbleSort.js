@@ -1,7 +1,7 @@
 function bubbleSort(unsortedArray) {
-  for (let i = 0; i < unsortedArray.length; i++) {
+  for (let i = 0; i < unsortedArray.length - 1; i++) {
     let swapped = false;
-    for (let j = 0; j < unsortedArray.length - 1; j++) {
+    for (let j = 0; j < unsortedArray.length - 1-i; j++) {
       if (unsortedArray[j] > unsortedArray[j + 1]) {
         let temp = unsortedArray[j];
         unsortedArray[j] = unsortedArray[j + 1];
@@ -16,6 +16,6 @@ function bubbleSort(unsortedArray) {
   return unsortedArray;
 }
 
-var arr = [1, 1, 1, 1, 1, 1, 1, 1];
+var arr = [5, 4, 3, 2, 1];
 
 console.log(bubbleSort(arr));
